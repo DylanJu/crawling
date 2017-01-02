@@ -1,0 +1,7 @@
+{
+  "watch": [
+    "server",
+    "client"
+  ],
+  "exec": "babel-node server/app.js"
+}
