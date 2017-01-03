@@ -58,15 +58,28 @@
 	
 	var _reactRedux = __webpack_require__(159);
 	
+	var _redux = __webpack_require__(166);
+	
 	var _Header = __webpack_require__(189);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	//REDUX
+	var store = createStore(sample);
 	// import Layout from './Layout'
-	_reactDom2.default.render(_react2.default.createElement(_Header2.default, null), document.getElementById('app')); //REDUX
-	// import { store } from './Store'
+	
+	
+	_reactDom2.default.render(_react2.default.createElement(
+	  _reactRedux.Provider,
+	  { store: store },
+	  ' ',
+	  function () {
+	    return _react2.default.createElement(_Header2.default, null);
+	  },
+	  ' '
+	), document.getElementById('app'));
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/ju/codestates/crawling/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "App.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 

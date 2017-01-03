@@ -1,8 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 // import Layout from './Layout'
-import { Provider } from 'react-redux'//REDUX
-// import { store } from './Store'
+import { Provider } from 'react-redux'; //REDUX
+import { createstore } from 'redux';
 import HelloWorld from './Header.js';
 
-ReactDOM.render(<HelloWorld/>, document.getElementById('app'))
+let store = createStore(sample);
+
+ReactDOM.render(<Provider store = {store}> {() => <HelloWorld/> } </Provider> , document.getElementById('app'))
